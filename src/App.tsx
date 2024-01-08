@@ -168,7 +168,7 @@ function UseRefComponent({ props = {} }) {
   console.log("Render UseRefComponent");
   return (
     <>
-      <p>mira la consola</p>
+      <p>Mira la consola</p>
       <button onClick={() => handleClick()}>like! {likesRef.current}</button>
       <br></br>
       <small>re-renders: {++rerenders.current}</small>
@@ -218,7 +218,7 @@ function UseRefElementComponent({ props = {} }) {
   );
 }
 // reducer example
-const reducer = (state, action) => {
+const reducer = (state: number, action: { type: string }) => {
   switch (action.type) {
     case "add":
       return ++state;
